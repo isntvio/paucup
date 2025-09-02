@@ -131,9 +131,9 @@ export default function Index() {
   const getCurrentSubject = (now: Date) => {
     const currentDay = dayNames[now.getDay()];
     const currentTimeStr = now.toTimeString().slice(0, 5);
-    
+
     const todaySchedule = schedule.filter(item => item.day === currentDay);
-    
+
     for (const item of todaySchedule) {
       if (currentTimeStr >= item.startTime && currentTimeStr <= item.endTime) {
         return item;
@@ -146,7 +146,7 @@ export default function Index() {
     const updateTime = () => {
       const now = new Date();
       setCurrentTime(now);
-      
+
       const subject = getCurrentSubject(now);
       setCurrentSubject(subject);
       setIsBreakTime(!subject);
@@ -159,15 +159,15 @@ export default function Index() {
   }, []);
 
   const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('id-ID', {
+    return date.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
-      hour12: false
+      hour12: true
     });
   };
 
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString('id-ID', {
+    return date.toLocaleDateString('en-GB', {
       day: '2-digit',
       month: '2-digit',
       year: 'numeric'
@@ -176,7 +176,7 @@ export default function Index() {
 
   const currentDay = dayNames[currentTime.getDay()];
   const todaySchedule = schedule.filter(item => item.day === currentDay);
-  
+
   const displayInfo = isBreakTime ? {
     title: "Penanggung Jawab Lab",
     name: labManager.name,
@@ -188,105 +188,101 @@ export default function Index() {
   };
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-black relative">
+    <div className="h-screen w-screen overflow-hidden bg-black relative font-['Poppins']">
       {/* Background Image with Blur */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3d031c83780c6fe8033c34fdef984cfec332b55?width=2668')",
           filter: "blur(10px)",
-          transform: "scale(1.1)"
+          transform: "scale(1.05)"
         }}
       />
-      
+
       {/* Main Container */}
       <div className="relative h-full flex">
         {/* Left Sidebar - Schedule */}
-        <div className="w-80 h-full bg-blue-600/50 backdrop-blur-sm shadow-lg overflow-y-auto">
-          <div className="p-4 space-y-1">
+        <div className="w-80 h-full overflow-y-auto" style={{ background: 'rgba(59, 89, 152, 0.5)' }}>
+          <div className="p-3 space-y-0">
             {todaySchedule.map((item, index) => (
-              <div
-                key={index}
-                className={`p-3 rounded-lg transition-all duration-300 ${
-                  currentSubject?.time === item.time
-                    ? 'bg-white/20 border-l-4 border-white'
-                    : 'hover:bg-white/10'
-                }`}
-              >
-                <div className="flex justify-between items-center">
-                  <div className="text-white font-semibold text-base">
-                    {item.time}
-                  </div>
-                  <div className="text-white font-medium text-sm">
-                    {item.subject}
+              <div key={index} className="relative">
+                <div className="px-4 py-3">
+                  <div className="flex justify-between items-center">
+                    <div className="text-white font-semibold text-xl leading-tight">
+                      {item.time}
+                    </div>
+                    <div className="text-white font-semibold text-lg">
+                      {item.subject}
+                    </div>
                   </div>
                 </div>
-                {index < todaySchedule.length - 1 && (
-                  <div className="w-full h-px bg-white/30 mt-3" />
-                )}
+                <div className="w-full h-1.5 bg-white mx-0" />
               </div>
             ))}
           </div>
         </div>
 
         {/* Main Content Area */}
-        <div className="flex-1 relative flex flex-col">
+        <div className="flex-1 relative">
           {/* Header */}
-          <div className="absolute top-4 right-4 z-10">
-            <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-lg px-6 py-3 flex items-center gap-4">
-              <span className="text-black font-bold text-3xl">Lab. 1</span>
-              <img 
+          <div className="absolute top-0 right-4 z-10">
+            <div className="bg-white rounded-3xl shadow-lg px-8 py-4 flex items-center gap-4">
+              <span className="text-black font-bold text-4xl">Lab. 1</span>
+              <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/33e5848381c6694a962caaa66fd395800fc528f9?width=164"
-                alt="Logo Neskar" 
-                className="w-12 h-12"
+                alt="Logo Neskar"
+                className="w-16 h-16"
               />
-              <img 
+              <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/0ea6069931e6ce26214360ec1aea204256852fe4?width=152"
-                alt="Profile" 
-                className="w-12 h-12 rounded-full"
+                alt="Profile"
+                className="w-16 h-16 rounded-full"
               />
             </div>
           </div>
 
-          {/* Main Content */}
-          <div className="flex-1 flex items-center justify-center px-16">
-            <div className="text-center space-y-8 max-w-4xl">
-              {/* Title */}
-              <h1 className="text-5xl font-bold">
-                <span className="text-white">Penanggung </span>
-                <span className="text-cyan-400">Jawab Lab</span>
-              </h1>
-
-              {/* Teacher/Manager Name */}
-              <h2 className="text-white text-3xl font-semibold">
-                {displayInfo.name}
-              </h2>
-
-              {/* Current Time */}
-              <div className="text-white text-6xl font-bold">
-                {formatTime(currentTime)}
-              </div>
-
-              {/* Day */}
-              <div className="text-white text-3xl font-semibold">
-                {currentDay}
-              </div>
-
-              {/* Date */}
-              <div className="text-white text-4xl font-semibold">
-                {formatDate(currentTime)}
-              </div>
-            </div>
-
-            {/* Teacher Photo Circle */}
-            <div className="absolute right-32 top-1/2 transform -translate-y-1/2">
-              <div className="w-80 h-80 rounded-full bg-white shadow-2xl overflow-hidden border-8 border-white/30">
-                <img 
-                  src={displayInfo.photo} 
+          {/* Teacher Photo Circle */}
+          <div className="absolute right-16 top-1/2 transform -translate-y-1/2 z-20">
+            <div className="relative">
+              {/* White circle background with shadow */}
+              <div className="w-96 h-96 rounded-full bg-white shadow-2xl"></div>
+              {/* Teacher photo */}
+              <div className="absolute inset-4 rounded-full overflow-hidden">
+                <img
+                  src={displayInfo.photo}
                   alt={displayInfo.name}
                   className="w-full h-full object-cover"
                 />
               </div>
+            </div>
+          </div>
+
+          {/* Main Content */}
+          <div className="absolute left-8 top-4 z-10 space-y-6">
+            {/* Title */}
+            <h1 className="font-bold leading-tight" style={{ fontSize: '70px' }}>
+              <span className="text-white drop-shadow-lg">Penanggung </span>
+              <span className="text-cyan-400 drop-shadow-lg">Jawab Lab</span>
+            </h1>
+
+            {/* Teacher/Manager Name */}
+            <h2 className="text-white text-4xl font-semibold drop-shadow-lg max-w-lg">
+              {displayInfo.name}
+            </h2>
+
+            {/* Current Time */}
+            <div className="text-white font-bold drop-shadow-lg" style={{ fontSize: '64px' }}>
+              {formatTime(currentTime)}
+            </div>
+
+            {/* Day */}
+            <div className="text-white text-4xl font-semibold drop-shadow-lg">
+              {currentDay}
+            </div>
+
+            {/* Date */}
+            <div className="text-white text-5xl font-semibold drop-shadow-lg">
+              {formatDate(currentTime)}
             </div>
           </div>
         </div>
