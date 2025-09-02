@@ -18,31 +18,31 @@ interface ScheduleItem {
 const teachers: Record<string, Teacher> = {
   "Bu Nurhanan Afifah": {
     name: "Bu Nurhanan Afifah, S.Pd.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/8363756/pexels-photo-8363756.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   "Mrs. Zian Muzakkiyah": {
     name: "Mrs. Zian Muzakkiyah Kosman, S.Pd, M.Pd.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/9064778/pexels-photo-9064778.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   "Pak Ahmad Jumadi": {
     name: "Pak Ahmad Jumadi, S.Kom.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   "Bu Dhian Nur Rahayu": {
     name: "Bu Dhian Nur Rahayu, ST, M.Kom.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/7256771/pexels-photo-7256771.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   "Bu Hani Siti Nuraeni": {
     name: "Bu Hani Siti Nuraeni, S.Pd.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/8363756/pexels-photo-8363756.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   "Pak Drs. Deden Hamdani": {
     name: "Pak Drs. Deden Hamdani, M.M.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   "Pak Gunawan Busyaeri": {
     name: "Pak Gunawan Busyaeri, S.Pd.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   "Pak Yusuf Effendy": {
     name: "Pak Yusuf Effendy, S.T., M.Kom",
@@ -50,19 +50,19 @@ const teachers: Record<string, Teacher> = {
   },
   "Bu Dewi Lestari Nengsih": {
     name: "Bu Dewi Lestari Nengsih, S.IP.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/9064778/pexels-photo-9064778.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   "Pak Darwis Prasetyo": {
     name: "Pak Darwis Prasetyo, S.Pd.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   "Bu Indria Listiani Ningrum": {
     name: "Bu Indria Listiani Ningrum, S.T.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/7256771/pexels-photo-7256771.jpeg?auto=compress&cs=tinysrgb&w=400"
   },
   "Pak Acun": {
     name: "Pak Acun, S.Pd.",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo: "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400"
   }
 };
 
