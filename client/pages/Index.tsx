@@ -18,121 +18,410 @@ interface ScheduleItem {
 const teachers: Record<string, Teacher> = {
   "Bu Nurhanan Afifah": {
     name: "Bu Nurhanan Afifah, S.Pd.",
-    photo: "https://images.pexels.com/photos/8363756/pexels-photo-8363756.jpeg?auto=compress&cs=tinysrgb&w=400"
+    photo:
+      "https://images.pexels.com/photos/8363756/pexels-photo-8363756.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   "Mrs. Zian Muzakkiyah": {
     name: "Mrs. Zian Muzakkiyah Kosman, S.Pd, M.Pd.",
-    photo: "https://images.pexels.com/photos/9064778/pexels-photo-9064778.jpeg?auto=compress&cs=tinysrgb&w=400"
+    photo:
+      "https://images.pexels.com/photos/9064778/pexels-photo-9064778.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   "Pak Ahmad Jumadi": {
     name: "Pak Ahmad Jumadi, S.Kom.",
-    photo: "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400"
+    photo:
+      "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   "Bu Dhian Nur Rahayu": {
     name: "Bu Dhian Nur Rahayu, ST, M.Kom.",
-    photo: "https://images.pexels.com/photos/7256771/pexels-photo-7256771.jpeg?auto=compress&cs=tinysrgb&w=400"
+    photo:
+      "https://images.pexels.com/photos/7256771/pexels-photo-7256771.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   "Bu Hani Siti Nuraeni": {
     name: "Bu Hani Siti Nuraeni, S.Pd.",
-    photo: "https://images.pexels.com/photos/8363756/pexels-photo-8363756.jpeg?auto=compress&cs=tinysrgb&w=400"
+    photo:
+      "https://images.pexels.com/photos/8363756/pexels-photo-8363756.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   "Pak Drs. Deden Hamdani": {
     name: "Pak Drs. Deden Hamdani, M.M.",
-    photo: "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400"
+    photo:
+      "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   "Pak Gunawan Busyaeri": {
     name: "Pak Gunawan Busyaeri, S.Pd.",
-    photo: "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400"
+    photo:
+      "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   "Pak Yusuf Effendy": {
     name: "Pak Yusuf Effendy, S.T., M.Kom",
-    photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+    photo:
+      "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400",
   },
   "Bu Dewi Lestari Nengsih": {
     name: "Bu Dewi Lestari Nengsih, S.IP.",
-    photo: "https://images.pexels.com/photos/9064778/pexels-photo-9064778.jpeg?auto=compress&cs=tinysrgb&w=400"
+    photo:
+      "https://images.pexels.com/photos/9064778/pexels-photo-9064778.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   "Pak Darwis Prasetyo": {
     name: "Pak Darwis Prasetyo, S.Pd.",
-    photo: "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400"
+    photo:
+      "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   "Bu Indria Listiani Ningrum": {
     name: "Bu Indria Listiani Ningrum, S.T.",
-    photo: "https://images.pexels.com/photos/7256771/pexels-photo-7256771.jpeg?auto=compress&cs=tinysrgb&w=400"
+    photo:
+      "https://images.pexels.com/photos/7256771/pexels-photo-7256771.jpeg?auto=compress&cs=tinysrgb&w=400",
   },
   "Pak Acun": {
     name: "Pak Acun, S.Pd.",
-    photo: "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400"
-  }
+    photo:
+      "https://images.pexels.com/photos/8653602/pexels-photo-8653602.jpeg?auto=compress&cs=tinysrgb&w=400",
+  },
 };
 
 const labManager: Teacher = {
   name: "Yusuf Effendy, S.T., M.Kom",
-  photo: "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400"
+  photo:
+    "https://api.builder.io/api/v1/image/assets/TEMP/98886d60bcbf3efe4ecea9efc86f224db66ab4fc?width=400",
 };
 
 const schedule: ScheduleItem[] = [
   // Monday
-  { time: "07:15 - 07:55", startTime: "07:15", endTime: "07:55", subject: "PST (Psikotes)", teacher: teachers["Bu Nurhanan Afifah"], day: "Senin" },
-  { time: "07:55 - 08:35", startTime: "07:55", endTime: "08:35", subject: "PST (Psikotes)", teacher: teachers["Bu Nurhanan Afifah"], day: "Senin" },
-  { time: "08:35 - 09:15", startTime: "08:35", endTime: "09:15", subject: "Inggris", teacher: teachers["Mrs. Zian Muzakkiyah"], day: "Senin" },
-  { time: "09:30 - 10:10", startTime: "09:30", endTime: "10:10", subject: "Inggris", teacher: teachers["Mrs. Zian Muzakkiyah"], day: "Senin" },
-  { time: "10:10 - 10:50", startTime: "10:10", endTime: "10:50", subject: "PWB", teacher: teachers["Pak Ahmad Jumadi"], day: "Senin" },
-  { time: "10:50 - 11:30", startTime: "10:50", endTime: "11:30", subject: "PWB", teacher: teachers["Pak Ahmad Jumadi"], day: "Senin" },
-  { time: "11:30 - 12:10", startTime: "11:30", endTime: "12:10", subject: "PWB", teacher: teachers["Pak Ahmad Jumadi"], day: "Senin" },
-  { time: "13:00 - 13:40", startTime: "13:00", endTime: "13:40", subject: "PWB", teacher: teachers["Pak Ahmad Jumadi"], day: "Senin" },
-  { time: "13:40 - 14:20", startTime: "13:40", endTime: "14:20", subject: "PWB", teacher: teachers["Pak Ahmad Jumadi"], day: "Senin" },
-  { time: "14:20 - 15:00", startTime: "14:20", endTime: "15:00", subject: "PWB", teacher: teachers["Pak Ahmad Jumadi"], day: "Senin" },
-  
+  {
+    time: "07:15 - 07:55",
+    startTime: "07:15",
+    endTime: "07:55",
+    subject: "PST (Psikotes)",
+    teacher: teachers["Bu Nurhanan Afifah"],
+    day: "Senin",
+  },
+  {
+    time: "07:55 - 08:35",
+    startTime: "07:55",
+    endTime: "08:35",
+    subject: "PST (Psikotes)",
+    teacher: teachers["Bu Nurhanan Afifah"],
+    day: "Senin",
+  },
+  {
+    time: "08:35 - 09:15",
+    startTime: "08:35",
+    endTime: "09:15",
+    subject: "Inggris",
+    teacher: teachers["Mrs. Zian Muzakkiyah"],
+    day: "Senin",
+  },
+  {
+    time: "09:30 - 10:10",
+    startTime: "09:30",
+    endTime: "10:10",
+    subject: "Inggris",
+    teacher: teachers["Mrs. Zian Muzakkiyah"],
+    day: "Senin",
+  },
+  {
+    time: "10:10 - 10:50",
+    startTime: "10:10",
+    endTime: "10:50",
+    subject: "PWB",
+    teacher: teachers["Pak Ahmad Jumadi"],
+    day: "Senin",
+  },
+  {
+    time: "10:50 - 11:30",
+    startTime: "10:50",
+    endTime: "11:30",
+    subject: "PWB",
+    teacher: teachers["Pak Ahmad Jumadi"],
+    day: "Senin",
+  },
+  {
+    time: "11:30 - 12:10",
+    startTime: "11:30",
+    endTime: "12:10",
+    subject: "PWB",
+    teacher: teachers["Pak Ahmad Jumadi"],
+    day: "Senin",
+  },
+  {
+    time: "13:00 - 13:40",
+    startTime: "13:00",
+    endTime: "13:40",
+    subject: "PWB",
+    teacher: teachers["Pak Ahmad Jumadi"],
+    day: "Senin",
+  },
+  {
+    time: "13:40 - 14:20",
+    startTime: "13:40",
+    endTime: "14:20",
+    subject: "PWB",
+    teacher: teachers["Pak Ahmad Jumadi"],
+    day: "Senin",
+  },
+  {
+    time: "14:20 - 15:00",
+    startTime: "14:20",
+    endTime: "15:00",
+    subject: "PWB",
+    teacher: teachers["Pak Ahmad Jumadi"],
+    day: "Senin",
+  },
+
   // Tuesday
-  { time: "07:15 - 08:35", startTime: "07:15", endTime: "08:35", subject: "PBT", teacher: teachers["Bu Dhian Nur Rahayu"], day: "Selasa" },
-  { time: "08:35 - 09:55", startTime: "08:35", endTime: "09:55", subject: "PBT", teacher: teachers["Bu Dhian Nur Rahayu"], day: "Selasa" },
-  { time: "10:10 - 11:30", startTime: "10:10", endTime: "11:30", subject: "PBT", teacher: teachers["Bu Dhian Nur Rahayu"], day: "Selasa" },
-  { time: "11:30 - 12:10", startTime: "11:30", endTime: "12:10", subject: "PAI", teacher: teachers["Bu Hani Siti Nuraeni"], day: "Selasa" },
-  { time: "13:00 - 13:40", startTime: "13:00", endTime: "13:40", subject: "INDONESIA", teacher: teachers["Pak Drs. Deden Hamdani"], day: "Selasa" },
-  { time: "13:40 - 14:20", startTime: "13:40", endTime: "14:20", subject: "INDONESIA", teacher: teachers["Pak Drs. Deden Hamdani"], day: "Selasa" },
-  { time: "14:20 - 15:00", startTime: "14:20", endTime: "15:00", subject: "INDONESIA", teacher: teachers["Pak Drs. Deden Hamdani"], day: "Selasa" },
+  {
+    time: "07:15 - 08:35",
+    startTime: "07:15",
+    endTime: "08:35",
+    subject: "PBT",
+    teacher: teachers["Bu Dhian Nur Rahayu"],
+    day: "Selasa",
+  },
+  {
+    time: "08:35 - 09:55",
+    startTime: "08:35",
+    endTime: "09:55",
+    subject: "PBT",
+    teacher: teachers["Bu Dhian Nur Rahayu"],
+    day: "Selasa",
+  },
+  {
+    time: "10:10 - 11:30",
+    startTime: "10:10",
+    endTime: "11:30",
+    subject: "PBT",
+    teacher: teachers["Bu Dhian Nur Rahayu"],
+    day: "Selasa",
+  },
+  {
+    time: "11:30 - 12:10",
+    startTime: "11:30",
+    endTime: "12:10",
+    subject: "PAI",
+    teacher: teachers["Bu Hani Siti Nuraeni"],
+    day: "Selasa",
+  },
+  {
+    time: "13:00 - 13:40",
+    startTime: "13:00",
+    endTime: "13:40",
+    subject: "INDONESIA",
+    teacher: teachers["Pak Drs. Deden Hamdani"],
+    day: "Selasa",
+  },
+  {
+    time: "13:40 - 14:20",
+    startTime: "13:40",
+    endTime: "14:20",
+    subject: "INDONESIA",
+    teacher: teachers["Pak Drs. Deden Hamdani"],
+    day: "Selasa",
+  },
+  {
+    time: "14:20 - 15:00",
+    startTime: "14:20",
+    endTime: "15:00",
+    subject: "INDONESIA",
+    teacher: teachers["Pak Drs. Deden Hamdani"],
+    day: "Selasa",
+  },
 
   // Wednesday
-  { time: "07:15 - 08:35", startTime: "07:15", endTime: "08:35", subject: "PKK", teacher: teachers["Pak Gunawan Busyaeri"], day: "Rabu" },
-  { time: "08:35 - 09:55", startTime: "08:35", endTime: "09:55", subject: "PKK", teacher: teachers["Pak Gunawan Busyaeri"], day: "Rabu" },
-  { time: "10:10 - 11:30", startTime: "10:10", endTime: "11:30", subject: "PKK", teacher: teachers["Pak Gunawan Busyaeri"], day: "Rabu" },
-  { time: "11:30 - 12:10", startTime: "11:30", endTime: "12:10", subject: "PPB", teacher: teachers["Pak Yusuf Effendy"], day: "Rabu" },
-  { time: "13:00 - 15:00", startTime: "13:00", endTime: "15:00", subject: "PPB", teacher: teachers["Pak Yusuf Effendy"], day: "Rabu" },
+  {
+    time: "07:15 - 08:35",
+    startTime: "07:15",
+    endTime: "08:35",
+    subject: "PKK",
+    teacher: teachers["Pak Gunawan Busyaeri"],
+    day: "Rabu",
+  },
+  {
+    time: "08:35 - 09:55",
+    startTime: "08:35",
+    endTime: "09:55",
+    subject: "PKK",
+    teacher: teachers["Pak Gunawan Busyaeri"],
+    day: "Rabu",
+  },
+  {
+    time: "10:10 - 11:30",
+    startTime: "10:10",
+    endTime: "11:30",
+    subject: "PKK",
+    teacher: teachers["Pak Gunawan Busyaeri"],
+    day: "Rabu",
+  },
+  {
+    time: "11:30 - 12:10",
+    startTime: "11:30",
+    endTime: "12:10",
+    subject: "PPB",
+    teacher: teachers["Pak Yusuf Effendy"],
+    day: "Rabu",
+  },
+  {
+    time: "13:00 - 15:00",
+    startTime: "13:00",
+    endTime: "15:00",
+    subject: "PPB",
+    teacher: teachers["Pak Yusuf Effendy"],
+    day: "Rabu",
+  },
 
   // Thursday
-  { time: "07:15 - 07:55", startTime: "07:15", endTime: "07:55", subject: "PST (Psikotes)", teacher: teachers["Bu Nurhanan Afifah"], day: "Kamis" },
-  { time: "07:55 - 08:35", startTime: "07:55", endTime: "08:35", subject: "PST (Psikotes)", teacher: teachers["Bu Nurhanan Afifah"], day: "Kamis" },
-  { time: "08:35 - 09:15", startTime: "08:35", endTime: "09:15", subject: "Inggris", teacher: teachers["Mrs. Zian Muzakkiyah"], day: "Kamis" },
-  { time: "09:30 - 10:10", startTime: "09:30", endTime: "10:10", subject: "Inggris", teacher: teachers["Mrs. Zian Muzakkiyah"], day: "Kamis" },
-  { time: "10:10 - 10:50", startTime: "10:10", endTime: "10:50", subject: "PPS", teacher: teachers["Bu Dewi Lestari Nengsih"], day: "Kamis" },
-  { time: "10:50 - 11:30", startTime: "10:50", endTime: "11:30", subject: "PPS", teacher: teachers["Bu Dewi Lestari Nengsih"], day: "Kamis" },
-  { time: "11:30 - 12:10", startTime: "11:30", endTime: "12:10", subject: "PAI", teacher: teachers["Bu Hani Siti Nuraeni"], day: "Kamis" },
-  { time: "13:00 - 13:40", startTime: "13:00", endTime: "13:40", subject: "PAI", teacher: teachers["Bu Hani Siti Nuraeni"], day: "Kamis" },
-  { time: "13:40 - 14:20", startTime: "13:40", endTime: "14:20", subject: "PFS", teacher: teachers["Pak Darwis Prasetyo"], day: "Kamis" },
-  { time: "14:20 - 15:00", startTime: "14:20", endTime: "15:00", subject: "PFS", teacher: teachers["Pak Darwis Prasetyo"], day: "Kamis" },
+  {
+    time: "07:15 - 07:55",
+    startTime: "07:15",
+    endTime: "07:55",
+    subject: "PST (Psikotes)",
+    teacher: teachers["Bu Nurhanan Afifah"],
+    day: "Kamis",
+  },
+  {
+    time: "07:55 - 08:35",
+    startTime: "07:55",
+    endTime: "08:35",
+    subject: "PST (Psikotes)",
+    teacher: teachers["Bu Nurhanan Afifah"],
+    day: "Kamis",
+  },
+  {
+    time: "08:35 - 09:15",
+    startTime: "08:35",
+    endTime: "09:15",
+    subject: "Inggris",
+    teacher: teachers["Mrs. Zian Muzakkiyah"],
+    day: "Kamis",
+  },
+  {
+    time: "09:30 - 10:10",
+    startTime: "09:30",
+    endTime: "10:10",
+    subject: "Inggris",
+    teacher: teachers["Mrs. Zian Muzakkiyah"],
+    day: "Kamis",
+  },
+  {
+    time: "10:10 - 10:50",
+    startTime: "10:10",
+    endTime: "10:50",
+    subject: "PPS",
+    teacher: teachers["Bu Dewi Lestari Nengsih"],
+    day: "Kamis",
+  },
+  {
+    time: "10:50 - 11:30",
+    startTime: "10:50",
+    endTime: "11:30",
+    subject: "PPS",
+    teacher: teachers["Bu Dewi Lestari Nengsih"],
+    day: "Kamis",
+  },
+  {
+    time: "11:30 - 12:10",
+    startTime: "11:30",
+    endTime: "12:10",
+    subject: "PAI",
+    teacher: teachers["Bu Hani Siti Nuraeni"],
+    day: "Kamis",
+  },
+  {
+    time: "13:00 - 13:40",
+    startTime: "13:00",
+    endTime: "13:40",
+    subject: "PAI",
+    teacher: teachers["Bu Hani Siti Nuraeni"],
+    day: "Kamis",
+  },
+  {
+    time: "13:40 - 14:20",
+    startTime: "13:40",
+    endTime: "14:20",
+    subject: "PFS",
+    teacher: teachers["Pak Darwis Prasetyo"],
+    day: "Kamis",
+  },
+  {
+    time: "14:20 - 15:00",
+    startTime: "14:20",
+    endTime: "15:00",
+    subject: "PFS",
+    teacher: teachers["Pak Darwis Prasetyo"],
+    day: "Kamis",
+  },
 
   // Friday
-  { time: "07:15 - 08:35", startTime: "07:15", endTime: "08:35", subject: "BSD", teacher: teachers["Bu Indria Listiani Ningrum"], day: "Jumat" },
-  { time: "08:35 - 09:55", startTime: "08:35", endTime: "09:55", subject: "BSD", teacher: teachers["Bu Indria Listiani Ningrum"], day: "Jumat" },
-  { time: "10:10 - 11:30", startTime: "10:10", endTime: "11:30", subject: "BSD", teacher: teachers["Bu Indria Listiani Ningrum"], day: "Jumat" },
-  { time: "11:30 - 12:10", startTime: "11:30", endTime: "12:10", subject: "MTK", teacher: teachers["Pak Acun"], day: "Jumat" },
-  { time: "13:00 - 13:40", startTime: "13:00", endTime: "13:40", subject: "MTK", teacher: teachers["Pak Acun"], day: "Jumat" },
-  { time: "13:40 - 14:20", startTime: "13:40", endTime: "14:20", subject: "MTK", teacher: teachers["Pak Acun"], day: "Jumat" }
+  {
+    time: "07:15 - 08:35",
+    startTime: "07:15",
+    endTime: "08:35",
+    subject: "BSD",
+    teacher: teachers["Bu Indria Listiani Ningrum"],
+    day: "Jumat",
+  },
+  {
+    time: "08:35 - 09:55",
+    startTime: "08:35",
+    endTime: "09:55",
+    subject: "BSD",
+    teacher: teachers["Bu Indria Listiani Ningrum"],
+    day: "Jumat",
+  },
+  {
+    time: "10:10 - 11:30",
+    startTime: "10:10",
+    endTime: "11:30",
+    subject: "BSD",
+    teacher: teachers["Bu Indria Listiani Ningrum"],
+    day: "Jumat",
+  },
+  {
+    time: "11:30 - 12:10",
+    startTime: "11:30",
+    endTime: "12:10",
+    subject: "MTK",
+    teacher: teachers["Pak Acun"],
+    day: "Jumat",
+  },
+  {
+    time: "13:00 - 13:40",
+    startTime: "13:00",
+    endTime: "13:40",
+    subject: "MTK",
+    teacher: teachers["Pak Acun"],
+    day: "Jumat",
+  },
+  {
+    time: "13:40 - 14:20",
+    startTime: "13:40",
+    endTime: "14:20",
+    subject: "MTK",
+    teacher: teachers["Pak Acun"],
+    day: "Jumat",
+  },
 ];
 
 export default function Index() {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [currentSubject, setCurrentSubject] = useState<ScheduleItem | null>(null);
+  const [currentSubject, setCurrentSubject] = useState<ScheduleItem | null>(
+    null,
+  );
   const [isBreakTime, setIsBreakTime] = useState(true);
 
-  const dayNames = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+  const dayNames = [
+    "Minggu",
+    "Senin",
+    "Selasa",
+    "Rabu",
+    "Kamis",
+    "Jumat",
+    "Sabtu",
+  ];
 
   const getCurrentSubject = (now: Date) => {
     const currentDay = dayNames[now.getDay()];
     const currentTimeStr = now.toTimeString().slice(0, 5);
 
-    const todaySchedule = schedule.filter(item => item.day === currentDay);
+    const todaySchedule = schedule.filter((item) => item.day === currentDay);
 
     for (const item of todaySchedule) {
       if (currentTimeStr >= item.startTime && currentTimeStr <= item.endTime) {
@@ -159,33 +448,35 @@ export default function Index() {
   }, []);
 
   const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('en-US', {
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true
+    return date.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
     });
   };
 
   const formatDate = (date: Date) => {
-    return date.toLocaleDateString('en-GB', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric'
+    return date.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
     });
   };
 
   const currentDay = dayNames[currentTime.getDay()];
-  const todaySchedule = schedule.filter(item => item.day === currentDay);
+  const todaySchedule = schedule.filter((item) => item.day === currentDay);
 
-  const displayInfo = isBreakTime ? {
-    title: "Penanggung Jawab Lab",
-    name: labManager.name,
-    photo: labManager.photo
-  } : {
-    title: "Mata Pelajaran Berlangsung",
-    name: currentSubject?.teacher.name || "",
-    photo: currentSubject?.teacher.photo || ""
-  };
+  const displayInfo = isBreakTime
+    ? {
+        title: "Penanggung Jawab Lab",
+        name: labManager.name,
+        photo: labManager.photo,
+      }
+    : {
+        title: "Mata Pelajaran Berlangsung",
+        name: currentSubject?.teacher.name || "",
+        photo: currentSubject?.teacher.photo || "",
+      };
 
   return (
     <div className="h-screen w-screen overflow-hidden bg-black relative font-['Poppins']">
@@ -193,16 +484,20 @@ export default function Index() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/d3d031c83780c6fe8033c34fdef984cfec332b55?width=2668')",
+          backgroundImage:
+            "url('https://api.builder.io/api/v1/image/assets/TEMP/d3d031c83780c6fe8033c34fdef984cfec332b55?width=2668')",
           filter: "blur(10px)",
-          transform: "scale(1.05)"
+          transform: "scale(1.05)",
         }}
       />
 
       {/* Main Container */}
       <div className="relative h-full flex flex-col lg:flex-row">
         {/* Left Sidebar - Schedule */}
-        <div className="w-full lg:w-80 h-48 lg:h-full overflow-y-auto" style={{ background: 'rgba(59, 89, 152, 0.5)' }}>
+        <div
+          className="w-full lg:w-80 h-48 lg:h-full overflow-y-auto"
+          style={{ background: "rgba(59, 89, 152, 0.5)" }}
+        >
           <div className="p-2 lg:p-3 space-y-0">
             {todaySchedule.map((item, index) => (
               <div key={index} className="relative">
@@ -227,7 +522,9 @@ export default function Index() {
           {/* Header */}
           <div className="absolute top-2 lg:top-0 right-2 lg:right-4 z-10">
             <div className="bg-white rounded-2xl lg:rounded-3xl shadow-lg px-4 lg:px-8 py-2 lg:py-4 flex items-center gap-2 lg:gap-4">
-              <span className="text-black font-bold text-lg lg:text-4xl">Lab. 1</span>
+              <span className="text-black font-bold text-lg lg:text-4xl">
+                Lab. 1
+              </span>
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/33e5848381c6694a962caaa66fd395800fc528f9?width=164"
                 alt="Logo Neskar"
