@@ -200,23 +200,23 @@ export default function Index() {
       />
 
       {/* Main Container */}
-      <div className="relative h-full flex">
+      <div className="relative h-full flex flex-col lg:flex-row">
         {/* Left Sidebar - Schedule */}
-        <div className="w-80 h-full overflow-y-auto" style={{ background: 'rgba(59, 89, 152, 0.5)' }}>
-          <div className="p-3 space-y-0">
+        <div className="w-full lg:w-80 h-48 lg:h-full overflow-y-auto" style={{ background: 'rgba(59, 89, 152, 0.5)' }}>
+          <div className="p-2 lg:p-3 space-y-0">
             {todaySchedule.map((item, index) => (
               <div key={index} className="relative">
-                <div className="px-4 py-3">
+                <div className="px-2 lg:px-4 py-2 lg:py-3">
                   <div className="flex justify-between items-center">
-                    <div className="text-white font-semibold text-xl leading-tight">
+                    <div className="text-white font-semibold text-sm lg:text-xl leading-tight">
                       {item.time}
                     </div>
-                    <div className="text-white font-semibold text-lg">
+                    <div className="text-white font-semibold text-xs lg:text-lg">
                       {item.subject}
                     </div>
                   </div>
                 </div>
-                <div className="w-full h-1.5 bg-white mx-0" />
+                <div className="w-full h-1 lg:h-1.5 bg-white mx-0" />
               </div>
             ))}
           </div>
@@ -225,29 +225,29 @@ export default function Index() {
         {/* Main Content Area */}
         <div className="flex-1 relative">
           {/* Header */}
-          <div className="absolute top-0 right-4 z-10">
-            <div className="bg-white rounded-3xl shadow-lg px-8 py-4 flex items-center gap-4">
-              <span className="text-black font-bold text-4xl">Lab. 1</span>
+          <div className="absolute top-2 lg:top-0 right-2 lg:right-4 z-10">
+            <div className="bg-white rounded-2xl lg:rounded-3xl shadow-lg px-4 lg:px-8 py-2 lg:py-4 flex items-center gap-2 lg:gap-4">
+              <span className="text-black font-bold text-lg lg:text-4xl">Lab. 1</span>
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/33e5848381c6694a962caaa66fd395800fc528f9?width=164"
                 alt="Logo Neskar"
-                className="w-16 h-16"
+                className="w-8 h-8 lg:w-16 lg:h-16"
               />
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/0ea6069931e6ce26214360ec1aea204256852fe4?width=152"
                 alt="Profile"
-                className="w-16 h-16 rounded-full"
+                className="w-8 h-8 lg:w-16 lg:h-16 rounded-full"
               />
             </div>
           </div>
 
           {/* Teacher Photo Circle */}
-          <div className="absolute right-16 top-1/2 transform -translate-y-1/2 z-20">
+          <div className="absolute right-4 lg:right-16 top-1/2 transform -translate-y-1/2 z-20">
             <div className="relative">
               {/* White circle background with shadow */}
-              <div className="w-96 h-96 rounded-full bg-white shadow-2xl"></div>
+              <div className="w-32 h-32 md:w-64 md:h-64 lg:w-96 lg:h-96 rounded-full bg-white shadow-2xl"></div>
               {/* Teacher photo */}
-              <div className="absolute inset-4 rounded-full overflow-hidden">
+              <div className="absolute inset-2 lg:inset-4 rounded-full overflow-hidden">
                 <img
                   src={displayInfo.photo}
                   alt={displayInfo.name}
@@ -258,30 +258,30 @@ export default function Index() {
           </div>
 
           {/* Main Content */}
-          <div className="absolute left-8 top-4 z-10 space-y-6">
+          <div className="absolute left-2 lg:left-8 top-16 lg:top-4 z-10 space-y-2 lg:space-y-6 max-w-xs md:max-w-md lg:max-w-2xl">
             {/* Title */}
-            <h1 className="font-bold leading-tight" style={{ fontSize: '70px' }}>
+            <h1 className="font-bold leading-tight text-2xl md:text-4xl lg:text-6xl xl:text-7xl">
               <span className="text-white drop-shadow-lg">Penanggung </span>
               <span className="text-cyan-400 drop-shadow-lg">Jawab Lab</span>
             </h1>
 
             {/* Teacher/Manager Name */}
-            <h2 className="text-white text-4xl font-semibold drop-shadow-lg max-w-lg">
+            <h2 className="text-white text-sm md:text-xl lg:text-4xl font-semibold drop-shadow-lg">
               {displayInfo.name}
             </h2>
 
             {/* Current Time */}
-            <div className="text-white font-bold drop-shadow-lg" style={{ fontSize: '64px' }}>
+            <div className="text-white font-bold drop-shadow-lg text-3xl md:text-5xl lg:text-6xl xl:text-7xl">
               {formatTime(currentTime)}
             </div>
 
             {/* Day */}
-            <div className="text-white text-4xl font-semibold drop-shadow-lg">
+            <div className="text-white text-lg md:text-2xl lg:text-4xl font-semibold drop-shadow-lg">
               {currentDay}
             </div>
 
             {/* Date */}
-            <div className="text-white text-5xl font-semibold drop-shadow-lg">
+            <div className="text-white text-xl md:text-3xl lg:text-5xl font-semibold drop-shadow-lg">
               {formatDate(currentTime)}
             </div>
           </div>
